@@ -1,0 +1,16 @@
+kubectl cluste-info #show cluster info
+
+kubectl get nodes # Display running nodes
+
+kubectl get pod # Display pods(the smallest piece of cluster)
+
+kubectl describe pod <podname>  # Detailed information of pod
+
+kubectl run nginx --image=nginx
+
+kubectl exec -it <podname> <command> # Execute command on a pod 
+
+kubectl logs <podname> # display logs
+
+kubectl port-forward <podname> <hostport>:<podport> # Port forwarding
+
