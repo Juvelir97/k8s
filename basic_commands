@@ -8,9 +8,11 @@ kubectl describe pod <podname>  # Detailed information of pod
 
 kubectl run nginx --image=nginx
 
-kubectl exec -it <podname> <command> # Execute command on a pod 
+kubectl exec -it <podname> -- <command> # Execute command on a pod 
 
 kubectl logs <podname> # display logs
+     kubectl logs <podname> -c <containername> # If 2 or more containers running within a pod
 
 kubectl port-forward <podname> <hostport>:<podport> # Port forwarding
 
+kubectl apply -f <file.yaml> # launch manifest file
