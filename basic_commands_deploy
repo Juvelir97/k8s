@@ -1,0 +1,29 @@
+# Create deployment + start pod
+kubectl create deployment $name --image nginx
+
+# Scale deployment
+kubectl scale deployment $name --replicas 4
+
+# Get replica status
+kubectl get rs
+
+# Autoscale (create hpa)
+kubectl autoscale deployment $name --min=4 --max=6 --cpu-percent=80
+
+# Show autoscale properties
+kubectl get hpa
+
+# Edit autoscale 
+kubectl edit hpa $name
+
+# Show deploy history
+kubectl rollout history deployment/$name
+
+# Show deploy status
+kubectl rollout status deployment/$name
+
+# Re-deploy 
+kubectl rollout restart deployment/$name
+
+# Restore prev deploy
+kubectl rollout undo deployment/$name --to-revision=
