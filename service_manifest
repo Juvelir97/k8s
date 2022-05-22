@@ -15,7 +15,7 @@ spec:
         project: nginx_prod   # Service will look for those PODS Labels!!!
     spec:
       containers:
-        - name : nginx_web
+        - name : nginxweb
           image: nginx:latest
           ports:
             - containerPort: 80
